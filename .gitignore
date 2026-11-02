@@ -1,0 +1,62 @@
+# Secrets and local machine configuration
+.env
+.env.*
+!.env.example
+config/llm.json
+config/*.local.json
+.claude/settings.local.json
+.vscode/
+.idea/
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+
+# Internal working notes (may contain local absolute paths)
+工作日志_*.md
+
+# Raw research/source assets (large and/or third-party copyrighted material)
+/规则书/
+/raw/
+/data/
+/.scrape/
+/.extracted/
+/rules/
+
+# Local databases, logs, caches, and model artifacts
+*.sqlite
+*.sqlite3
+*.db
+*.log
+*.tmp
+*.bak
+*.swp
+.cache/
+models/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+desktop.ini

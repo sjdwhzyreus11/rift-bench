@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rift-bench"
+version = "0.0.1"
+description = "Riftbound (符文战场) rules engine, rules-capability benchmark, and rules-QA agent"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "rift-bench" }]
+dependencies = [
+    "pydantic>=2.5",
+]
+
+[project.optional-dependencies]
+scrape = []  # 爬取已完成；pdftotext/curl 为系统工具
+rag = [
+    "sentence-transformers",
+    "chromadb",
+    "rank-bm25",
+]
+llm = [
+    "anthropic",
+]
+test = [
+    "pytest",
+    "hypothesis",
+]
+dev = [
+    "pytest",
+    "hypothesis",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

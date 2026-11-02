@@ -1,0 +1,15 @@
+{
+  "_comment": "rift-bench LLM 裁判配置。填入 base_url + api_key + model 三值即可。provider=openai 覆盖所有 OpenAI 兼容服务。",
+  "_base_url_examples": {
+    "DeepSeek": "https://api.deepseek.com/v1",
+    "通义千问": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "Kimi": "https://api.moonshot.cn/v1",
+    "智谱GLM": "https://open.bigmodel.cn/api/paas/v4",
+    "OpenAI": "https://api.openai.com/v1",
+    "本地Ollama": "http://localhost:11434/v1"
+  },
+  "provider": "openai",
+  "base_url": "https://api.deepseek.com/v1",
+  "api_key": "YOUR_API_KEY_HERE",
+  "model": "deepseek-chat"
+}
